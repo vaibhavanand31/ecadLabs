@@ -23,6 +23,8 @@ const isTezosAddress = (address: string) : boolean => {
     if (/^(KT||tz)[0-9a-ZA-Z]{34}$/.test(address)) {
         return true
     }
+
+    // check 
 }
 
 const isEthereumAddress = (address: string) : boolean => {
