@@ -1,14 +1,14 @@
 const keccak = require('keccak')
 
-interface EthereumAddress {
-    erc: string
-}
+interface EthereumAddress { 
+    erc: string 
+} 
 
-interface TezosAddress {
-    xtz: string
-}
+interface TezosAddress { 
+    xtz: string  
+} 
 
-type Address = EthereumAddress | TezosAddress
+type Address = EthereumAddress | TezosAddress 
 
 const parseAddress = (value: string) : Address => {
     if (isTezosAddress(value)) {
