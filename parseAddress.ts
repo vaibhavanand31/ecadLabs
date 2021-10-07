@@ -28,7 +28,7 @@ const isTezosAddress = (address: string) : boolean => {
 const isEthereumAddress = (address: string) : boolean => {
     // check if address starts with '0x'
     if (!/^(0x)[0-9a-f]{40}$/i.test(address)) {
-        return false
+        return false 
     } else if (/^(0x)[0-9a-f]{40}$/.test(address) || /^(0x)[0-9A-F]{40}$/.test(address)) {
         return true
     }
