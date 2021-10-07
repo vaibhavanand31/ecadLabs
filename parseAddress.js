@@ -9,7 +9,7 @@ var parseAddress = function (value) {
     throw "Invalid address.";
 };
 var isTezosAddress = function (address) {
-    if (/^(KT||tz)[0-9a-zA-Z]{34}$/.test(address)) {
+    if (/^(KT|tz)[0-9a-zA-Z]{34}$/.test(address)) {
         return true;
     }
     return false;
@@ -43,5 +43,7 @@ var isChecksumAddress = function (address) {
 var stripHexPrefix = function (value) {
     return value.slice(0, 2) === '0x' ? value.slice(2) : value;
 };
-var test = 'KT1XjcRq5MLAzMKQ3UHsrue2SeU2NbxUrzmU';
-console.log(parseAddress(test));
+var test1 = 'KT1XjcRq5MLAzMKQ3UHsrue2SeU2NbxUrzmU';
+var test2 = 'tz1WfXVp5arUUdPEwWr19JUMNwnmexNn9VD2';
+var test3 = '0xf7c07d7E9ef7eC247AaF5D3811f7c3493da3f21E';
+console.log(parseAddress(test2));
