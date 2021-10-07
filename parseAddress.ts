@@ -20,10 +20,10 @@ const parseAddress = (value: string) : Address => {
 }
 
 const isTezosAddress = (address: string) : boolean => {
-    if (/^(KT||tz)[0-9a-ZA-Z]{34}$/.test(address)) {
+    if (/^(KT||tz)[0-9a-zA-Z]{34}$/.test(address)) {
         return true
     }
-
+    return false
     // check 
 }
 
@@ -59,6 +59,6 @@ const stripHexPrefix = (value: string): string => {
     return value.slice(0, 2) === '0x' ? value.slice(2) : value
 }
 
-const test = '0xf7c07d7E9ef7eC247AaF5D3811f7c3493da3f21E'
+const test = 'KT1XjcRq5MLAzMKQ3UHsrue2SeU2NbxUrzmU'
 
 console.log(parseAddress(test))
