@@ -1,9 +1,9 @@
 interface EthereumAddress {
-	
+	erc20: string
 }
 
 interface TezosAddress {
-
+	xtz20: string
 }
 
 type Address = EthereumAddress | TezosAddress
